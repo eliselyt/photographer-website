@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alice Huang — Weddings &amp; Portraits</title>
+  <meta name="description" content="Alice Huang photographs weddings and portraits with patience and a lot of warmth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ground: #ECE8E2;
+      --ink: #2B2724;
+      --ink-soft: #4A433D;
+      --ink-muted: #6B625A;
+      --accent: #8A5A44;
+      --rule: #D4CDC3;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans: 'Work Sans', system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--ground);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 18px;
+      line-height: 1.65;
+    }
+    a { color: var(--accent); }
+    a:hover { color: #4F3024; }
+    h1, h2 { font-family: var(--serif); font-weight: 300; margin: 0; }
+    p { margin: 0; }
+
+    .section { padding-left: 64px; padding-right: 64px; }
+
+    /* Hero */
+    .hero {
+      min-height: 680px;
+      padding-top: 96px;
+      padding-bottom: 96px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 28px;
+    }
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+    .hero-name {
+      font-size: 104px;
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+    }
+    .tagline {
+      max-width: 560px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 26px;
+      line-height: 1.4;
+      color: var(--ink-soft);
+    }
+    .cta {
+      margin-top: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 36px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .cta:hover { color: #FFFFFF; filter: brightness(0.92); }
+    .cta:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+    /* Portfolio */
+    .portfolio { padding-top: 32px; padding-bottom: 160px; }
+    .grid {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 48px;
+    }
+    .tile {
+      margin: 0;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+    .tile img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .tile.photo { padding: 0; }
+    .tile figcaption {
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4F4842;
+    }
+
+    /* About */
+    .about-section { padding-bottom: 176px; }
+    .about {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+      gap: 80px;
+      align-items: start;
+    }
+    .about h2 { font-size: 48px; line-height: 1.1; letter-spacing: -0.01em; }
+    .about-copy { display: flex; flex-direction: column; gap: 20px; color: #3F3934; }
+
+    /* Contact */
+    .contact {
+      padding-top: 144px;
+      padding-bottom: 160px;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 24px;
+    }
+    .contact h2 { font-size: 56px; line-height: 1.1; letter-spacing: -0.01em; }
+    .contact-intro { max-width: 480px; color: var(--ink-soft); }
+    .email {
+      margin-top: 12px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 32px;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 8px;
+      overflow-wrap: anywhere;
+    }
+    .copyright { margin-top: 64px; font-size: 13px; color: var(--ink-muted); }
+
+    @media (max-width: 880px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+      .about { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+    }
+    @media (max-width: 560px) {
+      .section { padding-left: 24px; padding-right: 24px; }
+      .grid { grid-template-columns: minmax(0, 1fr); }
+      .hero-name { font-size: 56px; }
+      .contact h2 { font-size: 40px; }
+      .email { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero section">
+    <p class="eyebrow">Photographer</p>
+    <h1 class="hero-name">Alice Huang</h1>
+    <p class="tagline">Weddings and portraits, photographed with patience and a lot of warmth.</p>
+    <a class="cta" href="#contact">Get in touch</a>
+  </header>
+
+  <main>
+    <section class="portfolio section" aria-label="Selected work">
+      <div class="grid">
+        <figure class="tile photo" style="background: #D9D2C8">
+          <img src="images/wedding-ceremony.jpg" alt="Bride and groom kiss behind her bouquet at a lakeside ceremony, framed by white flowers" style="object-position: center 40%">
+        </figure>
+        <figure class="tile" style="background: #CFC7BC"><figcaption>Portrait · natural light</figcaption></figure>
+        <figure class="tile" style="background: #DDD6CD"><figcaption>Wedding · first look</figcaption></figure>
+        <figure class="tile" style="background: #D3CBC0"><figcaption>Portrait · family</figcaption></figure>
+        <figure class="tile" style="background: #DAD3C9"><figcaption>Wedding · details</figcaption></figure>
+        <figure class="tile" style="background: #CCC4B9"><figcaption>Portrait · studio</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="about-section section" aria-labelledby="about-h">
+      <div class="about">
+        <h2 id="about-h">Hello, I’m Alice.</h2>
+        <div class="about-copy">
+          <p>I photograph weddings and portraits for people who would rather feel like themselves than pose. My favourite frames are usually the in-between ones: the laugh after the vows, the hand on a shoulder, the quiet minute before everyone arrives.</p>
+          <p>I’m based in [your city] and happy to travel. Tell me a little about your day or the portraits you have in mind, and we’ll take it from there.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="contact section">
+    <h2>Let’s make something lovely.</h2>
+    <p class="contact-intro">Write to me with your date, your place and anything you’d like me to know. I reply to every message personally.</p>
+    <a class="email" href="mailto:[you@yourdomain.com]">[you@yourdomain.com]</a>
+    <p class="copyright">© Alice Huang</p>
+  </footer>
+
+</body>
+</html>
