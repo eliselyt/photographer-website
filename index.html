@@ -10,12 +10,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
   <style>
     :root {
-      --ground: #ECE8E2;
-      --ink: #2B2724;
-      --ink-soft: #4A433D;
-      --ink-muted: #6B625A;
-      --accent: #8A5A44;
-      --rule: #D4CDC3;
+      --ground: #FFF6EC;
+      --ink: #22113A;
+      --ink-soft: #3A2A4F;
+      --accent: #D6246E;
+      --accent-hover: #B01858;
+      --violet: #7C3AED;
+      --saffron: #FFB627;
+      --coral: #FF6B4A;
+      --teal: #0FA3A3;
+      --night: #22113A;
       --serif: 'Fraunces', Georgia, serif;
       --sans: 'Work Sans', system-ui, sans-serif;
     }
@@ -31,7 +35,7 @@
       line-height: 1.65;
     }
     a { color: var(--accent); }
-    a:hover { color: #4F3024; }
+    a:hover { color: var(--accent-hover); }
     h1, h2 { font-family: var(--serif); font-weight: 300; margin: 0; }
     p { margin: 0; }
 
@@ -52,8 +56,9 @@
     .eyebrow {
       font-size: 13px;
       letter-spacing: 0.22em;
+      font-weight: 500;
       text-transform: uppercase;
-      color: var(--ink-muted);
+      color: var(--accent);
     }
     .hero-name {
       font-size: 104px;
@@ -67,7 +72,7 @@
       font-weight: 300;
       font-size: 26px;
       line-height: 1.4;
-      color: var(--ink-soft);
+      color: var(--violet);
     }
     .cta {
       margin-top: 20px;
@@ -84,7 +89,7 @@
       font-weight: 500;
       letter-spacing: 0.02em;
     }
-    .cta:hover { color: #FFFFFF; filter: brightness(0.92); }
+    .cta:hover { color: #FFFFFF; background: var(--accent-hover); }
     .cta:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 
     /* Portfolio */
@@ -110,13 +115,20 @@
       height: 100%;
       object-fit: cover;
     }
-    .tile.photo { padding: 0; }
+    .tile.photo { padding: 0; background: var(--saffron); }
     .tile figcaption {
       font-size: 13px;
+      font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #4F4842;
+      color: var(--ink);
     }
+    .t-violet { background: var(--violet); }
+    .t-saffron { background: var(--saffron); }
+    .t-teal { background: var(--teal); }
+    .t-coral { background: var(--coral); }
+    .t-raspberry { background: var(--accent); }
+    .t-violet figcaption, .t-raspberry figcaption { color: #FFFFFF; }
 
     /* About */
     .about-section { padding-bottom: 176px; }
@@ -129,13 +141,14 @@
       align-items: start;
     }
     .about h2 { font-size: 48px; line-height: 1.1; letter-spacing: -0.01em; }
-    .about-copy { display: flex; flex-direction: column; gap: 20px; color: #3F3934; }
+    .about-copy { display: flex; flex-direction: column; gap: 20px; color: var(--ink-soft); }
 
     /* Contact */
     .contact {
       padding-top: 144px;
       padding-bottom: 160px;
-      border-top: 1px solid var(--rule);
+      background: var(--night);
+      color: #FFFFFF;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -143,9 +156,10 @@
       gap: 24px;
     }
     .contact h2 { font-size: 56px; line-height: 1.1; letter-spacing: -0.01em; }
-    .contact-intro { max-width: 480px; color: var(--ink-soft); }
+    .contact-intro { max-width: 480px; color: #E9DDF7; }
     .email {
       margin-top: 12px;
+      color: var(--saffron);
       font-family: var(--serif);
       font-style: italic;
       font-size: 32px;
@@ -154,7 +168,9 @@
       text-underline-offset: 8px;
       overflow-wrap: anywhere;
     }
-    .copyright { margin-top: 64px; font-size: 13px; color: var(--ink-muted); }
+    .email:hover { color: #FFD27A; }
+    .email:focus-visible { outline: 2px solid var(--saffron); outline-offset: 6px; }
+    .copyright { margin-top: 64px; font-size: 13px; color: #BBA8D6; }
 
     @media (max-width: 880px) {
       .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
@@ -181,14 +197,14 @@
   <main>
     <section class="portfolio section" aria-label="Selected work">
       <div class="grid">
-        <figure class="tile photo" style="background: #D9D2C8">
+        <figure class="tile photo">
           <img src="images/wedding-ceremony.jpg" alt="Bride and groom kiss behind her bouquet at a lakeside ceremony, framed by white flowers" style="object-position: center 40%">
         </figure>
-        <figure class="tile" style="background: #CFC7BC"><figcaption>Portrait · natural light</figcaption></figure>
-        <figure class="tile" style="background: #DDD6CD"><figcaption>Wedding · first look</figcaption></figure>
-        <figure class="tile" style="background: #D3CBC0"><figcaption>Portrait · family</figcaption></figure>
-        <figure class="tile" style="background: #DAD3C9"><figcaption>Wedding · details</figcaption></figure>
-        <figure class="tile" style="background: #CCC4B9"><figcaption>Portrait · studio</figcaption></figure>
+        <figure class="tile t-violet"><figcaption>Portrait · natural light</figcaption></figure>
+        <figure class="tile t-saffron"><figcaption>Wedding · first look</figcaption></figure>
+        <figure class="tile t-teal"><figcaption>Portrait · family</figcaption></figure>
+        <figure class="tile t-coral"><figcaption>Wedding · details</figcaption></figure>
+        <figure class="tile t-raspberry"><figcaption>Portrait · studio</figcaption></figure>
       </div>
     </section>
 
